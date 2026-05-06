@@ -1,4 +1,4 @@
-name: My First Pipeline
+name: My Pipeline with Test
 
 on: [push]
 
@@ -10,5 +10,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Run app
-        run: python app.py
+      - name: Install Python
+        run: sudo apt-get install python3 -y
+
+      - name: Run Tests
+        run: python3 -m pytest

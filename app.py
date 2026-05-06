@@ -1,1 +1,2 @@
-this is broken
+def add(a, b):
+    return a + b
